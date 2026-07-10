@@ -1,0 +1,1568 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuźnia Żywiołów — The Elemental Forge · Kucie Metalu i Ekologiczna Uprawa</title>
+    <meta name="description" content="Kuźnia Żywiołów — ręczne kucie metalu i ekologiczna uprawa owoców i warzyw. Necessity is a mother of invention. Kontakt: +44 7723 012423">
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/zh3H50Sh/628422065-1339568864642432-3358725624133701675-n.jpg" />
+    
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;1,400&display=swap');
+
+      :root {
+        --black: #000000;
+        --black-warm: #0D0C0A;
+        --black-mid: #1A1815;
+        --taupe: #C4B7A7;
+        --taupe-light: #D8CFC2;
+        --taupe-dark: #A89A85;
+        --white: #F5F2EC;
+        --muted: #6A6255;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border-radius: 0 !important;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        background-color: var(--black);
+        color: var(--white);
+        font-family: 'EB Garamond', serif;
+      }
+
+      body {
+        overflow-x: hidden;
+        background-color: var(--black);
+      }
+
+      section {
+        scroll-margin-top: 72px;
+      }
+
+      /* Typography */
+      h1 {
+        font-family: 'Cinzel', serif;
+        font-weight: 700;
+        font-size: clamp(2.8rem, 7vw, 5.5rem);
+        letter-spacing: 0.02em;
+        line-height: 1.05;
+      }
+
+      h2 {
+        font-family: 'Cinzel', serif;
+        font-weight: 600;
+        font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+      }
+
+      .section-label {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 600;
+        font-size: 0.75rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .body-text {
+        font-family: 'EB Garamond', serif;
+        font-weight: 400;
+        font-size: 1.05rem;
+        line-height: 1.78;
+      }
+
+      /* Spatial rules */
+      .section-padding {
+        padding: 96px 0;
+      }
+
+      .container-width {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Rules and Dividers */
+      .dark-section {
+        background-color: var(--black);
+        color: var(--white);
+        background-image: repeating-linear-gradient(45deg, rgba(196,183,167,0.015) 0px, rgba(196,183,167,0.015) 1px, transparent 1px, transparent 24px);
+      }
+
+      .light-section {
+        background-color: var(--white);
+        color: var(--black);
+      }
+
+      /* Decorative System */
+      .ornament {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 16px 0 24px 0;
+      }
+
+      .ornament.left-aligned {
+        justify-content: flex-start;
+      }
+
+      .orn-line {
+        display: inline-block;
+        width: 70px;
+        height: 1px;
+      }
+
+      .dark-section .orn-line {
+        background-color: rgba(196, 183, 167, 0.35);
+      }
+
+      .dark-section .orn-mark {
+        color: var(--taupe);
+        font-size: 1rem;
+      }
+
+      .light-section .orn-line {
+        background-color: var(--taupe-dark);
+      }
+
+      .light-section .orn-mark {
+        color: var(--black);
+        font-size: 1rem;
+      }
+
+      /* Navigation */
+      .nav-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 72px;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(196, 183, 167, 0.2);
+        z-index: 1000;
+      }
+
+      .nav-container {
+        max-width: 1120px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .logo-group {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .nav-logo {
+        width: 36px;
+        height: 36px;
+        object-fit: cover;
+        border: 1px solid rgba(196, 183, 167, 0.3);
+      }
+
+      .logo-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo-title {
+        font-family: 'Cinzel', serif;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: var(--white);
+        letter-spacing: 0.05em;
+        line-height: 1.2;
+      }
+
+      .logo-subtitle {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 0.7rem;
+        color: var(--taupe);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        line-height: 1.2;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .nav-links a {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 500;
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+        color: rgba(245, 242, 236, 0.6);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+        display: inline-block;
+      }
+
+      .nav-links a:hover {
+        color: var(--taupe);
+      }
+
+      .nav-label-trigger {
+        display: contents;
+      }
+
+      .nav-btn-desktop {
+        display: inline-block;
+        border: 1px solid var(--taupe);
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 600;
+        font-size: 0.8rem;
+        color: var(--taupe);
+        text-decoration: none;
+        padding: 8px 20px;
+        letter-spacing: 0.1em;
+        transition: all 0.2s ease;
+      }
+
+      .nav-btn-desktop:hover {
+        background-color: var(--taupe);
+        color: var(--black);
+      }
+
+      .nav-btn-mobile {
+        display: none;
+      }
+
+      .nav-cb {
+        display: none;
+      }
+
+      .nav-burger {
+        display: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--white);
+        line-height: 44px;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        user-select: none;
+      }
+
+      .nav-burger::before {
+        content: "≡";
+      }
+
+      .nav-cb:checked ~ .nav-burger::before {
+        content: "✕";
+      }
+
+      /* Hero Section */
+      .hero-section {
+        position: relative;
+        min-height: 100vh;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.72) 55%, rgba(0,0,0,0.97) 100%), url('https://i.ibb.co/7JZFnFHx/738954240-1458750512724266-8788829580981052213-n.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        padding: 0 max(24px, 6vw) max(80px, 10vh);
+        overflow: hidden;
+      }
+
+      .hero-content {
+        max-width: 720px;
+        position: relative;
+        z-index: 2;
+        text-align: left;
+      }
+
+      .hero-h1-main {
+        font-family: 'Cinzel', serif;
+        font-weight: 700;
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        color: var(--white);
+        line-height: 1.05;
+      }
+
+      .hero-h1-sub {
+        font-family: 'Cinzel', serif;
+        font-weight: 400;
+        font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+        color: var(--taupe);
+        letter-spacing: 0.05em;
+        margin-top: 8px;
+        display: block;
+      }
+
+      .hero-motto {
+        font-family: 'EB Garamond', serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: rgba(245, 242, 236, 0.65);
+        max-width: 460px;
+        margin-top: 20px;
+        line-height: 1.6;
+      }
+
+      .hero-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .hero-chip {
+        background: rgba(196, 183, 167, 0.1);
+        border: 1px solid rgba(196, 183, 167, 0.25);
+        padding: 6px 16px;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 500;
+        font-size: 0.82rem;
+        color: rgba(245, 242, 236, 0.85);
+        letter-spacing: 0.05em;
+      }
+
+      .hero-links {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-top: 32px;
+      }
+
+      .hero-link-primary {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--taupe);
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: color 0.2s ease;
+      }
+
+      .hero-link-primary:hover {
+        color: var(--white);
+      }
+
+      .hero-link-secondary {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 0.9rem;
+        color: rgba(245, 242, 236, 0.3);
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: color 0.2s ease;
+      }
+
+      .hero-link-secondary:hover {
+        color: rgba(245, 242, 236, 0.65);
+      }
+
+      .hero-vertical-text {
+        position: absolute;
+        top: 120px;
+        right: max(24px, 4vw);
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 0.65rem;
+        color: rgba(196, 183, 167, 0.15);
+        letter-spacing: 0.3em;
+        z-index: 1;
+      }
+
+      /* About Section */
+      .about-columns {
+        display: grid;
+        grid-template-columns: 55fr 45fr;
+        gap: 72px;
+        align-items: start;
+      }
+
+      .about-rule {
+        width: 56px;
+        height: 3px;
+        background-color: var(--black);
+        border: none;
+        margin: 14px 0 24px 0;
+      }
+
+      .about-feature-rows {
+        margin-top: 40px;
+      }
+
+      .about-feature-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid var(--taupe-dark);
+        padding: 14px 0;
+        gap: 16px;
+      }
+
+      .about-feature-title {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--black);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        white-space: nowrap;
+      }
+
+      .about-feature-desc {
+        font-family: 'EB Garamond', serif;
+        font-weight: 400;
+        font-style: italic;
+        font-size: 0.95rem;
+        color: var(--muted);
+        text-align: right;
+      }
+
+      .about-card {
+        background-color: var(--black);
+        padding: 36px 32px;
+        border-radius: 0;
+        color: var(--white);
+        border: 1px solid rgba(196, 183, 167, 0.15);
+      }
+
+      .about-card-label {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 600;
+        font-size: 0.72rem;
+        color: var(--taupe);
+        text-transform: uppercase;
+        letter-spacing: 0.24em;
+      }
+
+      .about-card-rule-1 {
+        width: 40px;
+        border: 0;
+        border-top: 1px solid rgba(196, 183, 167, 0.25);
+        margin: 12px 0;
+      }
+
+      .about-card-phone {
+        font-family: 'Cinzel', serif;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: var(--white);
+        word-break: break-all;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        display: block;
+      }
+
+      .about-card-phone:hover {
+        color: var(--taupe);
+      }
+
+      .about-card-email {
+        display: block;
+        font-family: 'EB Garamond', serif;
+        font-weight: 400;
+        font-size: 0.95rem;
+        color: rgba(245, 242, 236, 0.5);
+        margin-top: 14px;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .about-card-email:hover {
+        color: var(--taupe);
+      }
+
+      .about-card-rule-2 {
+        border: 0;
+        border-top: 1px solid rgba(196, 183, 167, 0.1);
+        margin: 18px 0;
+      }
+
+      .about-card-motto {
+        font-family: 'EB Garamond', serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 0.95rem;
+        color: rgba(245, 242, 236, 0.35);
+      }
+
+      /* Craft Section */
+      .craft-grid-wrapper {
+        background-color: rgba(196, 183, 167, 0.2);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        margin-top: 48px;
+        border: 1px solid rgba(196, 183, 167, 0.2);
+      }
+
+      .craft-panel {
+        background-color: var(--black-warm);
+        padding: 48px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .craft-panel-title {
+        font-family: 'Cinzel', serif;
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: var(--taupe);
+      }
+
+      .craft-panel-desc {
+        font-family: 'EB Garamond', serif;
+        font-weight: 400;
+        font-size: 0.95rem;
+        color: rgba(245, 242, 236, 0.55);
+        line-height: 1.75;
+        margin-top: 16px;
+        max-width: 440px;
+      }
+
+      /* Gallery Section */
+      .gallery-cb {
+        display: none;
+      }
+
+      .gallery-extra-container {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transform: translateY(20px);
+        transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .gallery-cb:checked ~ .container-width .gallery-extra-container {
+        max-height: 2000px; /* plenty of height to fit all 7 images */
+        opacity: 1;
+        transform: translateY(0);
+        margin-top: 12px; /* space between first grid and extra grid */
+      }
+
+      .toggle-less {
+        display: none;
+      }
+
+      .gallery-cb:checked ~ .container-width .gallery-toggle .toggle-more {
+        display: none;
+      }
+
+      .gallery-cb:checked ~ .container-width .gallery-toggle .toggle-less {
+        display: inline;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-top: 40px;
+      }
+
+      .gallery-item {
+        width: 100%;
+        display: block;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        display: block;
+        filter: grayscale(0.15) contrast(1.05);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .gallery-item img:hover {
+        filter: grayscale(0) contrast(1.1);
+        outline: 2px solid #000000;
+        outline-offset: -2px;
+        transform: scale(1.03);
+      }
+
+      .gallery-toggle {
+        border: 1px solid var(--taupe-dark);
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 600;
+        color: var(--black);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        padding: 10px 30px;
+        margin: 32px auto 0;
+        display: block;
+        width: fit-content;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.2s ease;
+        user-select: none;
+      }
+
+      .gallery-toggle:hover {
+        background-color: var(--black);
+        color: var(--white);
+      }
+
+      /* Lightbox modal using :target */
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(13, 12, 10, 0.96);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .lightbox:target {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .lightbox-backdrop {
+        position: absolute;
+        inset: 0;
+        cursor: zoom-out;
+      }
+
+      .lightbox-content {
+        position: relative;
+        max-width: 90vw;
+        max-height: 85vh;
+        transform: scale(0.95);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10000;
+      }
+
+      .lightbox:target .lightbox-content {
+        transform: scale(1);
+      }
+
+      .lightbox-image {
+        max-width: 100%;
+        max-height: 75vh;
+        object-fit: contain;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        border: 1px solid var(--taupe-dark);
+      }
+
+      .lightbox-caption {
+        color: var(--white);
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: 1.1rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-top: 16px;
+        text-align: center;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      }
+
+      .lightbox-close {
+        position: absolute;
+        top: -48px;
+        right: 0;
+        width: 36px;
+        height: 36px;
+        color: var(--white);
+        font-size: 2.5rem;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s ease, transform 0.2s ease;
+        line-height: 1;
+      }
+
+      .lightbox-close:hover {
+        color: var(--taupe);
+        transform: scale(1.1);
+      }
+
+      .lightbox-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--white);
+        font-size: 4rem;
+        text-decoration: none;
+        padding: 10px;
+        transition: color 0.2s ease, transform 0.2s ease;
+        user-select: none;
+        z-index: 10001;
+        font-family: serif;
+        line-height: 1;
+      }
+
+      .lightbox-arrow:hover {
+        color: var(--taupe);
+        transform: translateY(-50%) scale(1.2);
+      }
+
+      .lightbox-arrow.prev {
+        left: -60px;
+      }
+
+      .lightbox-arrow.next {
+        right: -60px;
+      }
+
+      @media (max-width: 900px) {
+        .lightbox-arrow {
+          font-size: 3rem;
+        }
+        .lightbox-arrow.prev {
+          left: -40px;
+        }
+        .lightbox-arrow.next {
+          right: -40px;
+        }
+        .lightbox-content {
+          max-width: 80vw;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .lightbox-arrow {
+          font-size: 2.5rem;
+          padding: 5px;
+        }
+        .lightbox-arrow.prev {
+          left: -30px;
+        }
+        .lightbox-arrow.next {
+          right: -30px;
+        }
+        .lightbox-content {
+          max-width: 75vw;
+        }
+      }
+
+      /* Motto Section */
+      .motto-section {
+        background-color: var(--black);
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .motto-container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .motto-quote-mark {
+        font-family: 'Cinzel', serif;
+        font-weight: 700;
+        font-size: 6rem;
+        line-height: 0.7;
+        color: rgba(196, 183, 167, 0.1);
+        margin-bottom: -10px;
+        user-select: none;
+      }
+
+      .motto-quote {
+        font-family: 'EB Garamond', serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+        color: var(--white);
+        line-height: 1.4;
+      }
+
+      .motto-sub {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 500;
+        font-size: 0.85rem;
+        color: rgba(196, 183, 167, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        margin-top: 16px;
+      }
+
+      /* Contact Section */
+      .contact-container {
+        max-width: 520px;
+        margin: 40px auto 0;
+        padding: 0 24px;
+      }
+
+      .contact-intro {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .contact-row {
+        border-bottom: 1px solid var(--taupe-dark);
+        padding: 18px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .contact-row-label {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 600;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--muted);
+      }
+
+      .contact-row-value.phone {
+        font-family: 'Cinzel', serif;
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: var(--black);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .contact-row-value.phone:hover {
+        color: var(--muted);
+      }
+
+      .contact-row-value.email {
+        font-family: 'EB Garamond', serif;
+        font-weight: 400;
+        font-size: 1.1rem;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .contact-row-value.email:hover {
+        color: var(--black);
+      }
+
+      .contact-cta-primary {
+        display: block;
+        background-color: var(--black);
+        color: var(--white);
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: 14px 32px;
+        width: 100%;
+        margin-top: 24px;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .contact-cta-primary:hover {
+        background-color: var(--black-mid);
+        box-shadow: 4px 4px 0 var(--taupe);
+      }
+
+      .contact-cta-secondary {
+        display: block;
+        border: 1.5px solid var(--black);
+        background-color: transparent;
+        color: var(--black);
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.10em;
+        padding: 12px 32px;
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .contact-cta-secondary:hover {
+        background-color: var(--black);
+        color: var(--white);
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--black);
+        border-top: 2px solid var(--taupe);
+        padding: 32px 0;
+      }
+
+      .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .footer-logo-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .footer-logo {
+        width: 28px;
+        height: 28px;
+        object-fit: cover;
+        border: 1px solid rgba(196, 183, 167, 0.3);
+      }
+
+      .footer-logo-title {
+        font-family: 'Cinzel', serif;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: var(--white);
+        letter-spacing: 0.05em;
+      }
+
+      .footer-sub {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 0.75rem;
+        color: rgba(196, 183, 167, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .footer-copyright {
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 0.75rem;
+        color: rgba(245, 242, 236, 0.15);
+      }
+
+      .footer-rule {
+        border: 0;
+        border-top: 1px solid rgba(196, 183, 167, 0.12);
+        margin: 12px 0;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-weight: 400;
+        font-size: 0.78rem;
+        color: rgba(245, 242, 236, 0.18);
+        letter-spacing: 0.05em;
+      }
+
+      /* Responsiveness */
+      @media (max-width: 1024px) {
+        .gallery-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-container {
+          position: static;
+        }
+
+        .nav-burger {
+          display: block;
+          position: relative;
+          z-index: 1010;
+        }
+
+        .nav-links {
+          display: flex;
+          position: absolute;
+          top: 72px;
+          left: 0;
+          right: 0;
+          height: calc(100vh - 72px);
+          background: #0d0c0a; /* solid, fully opaque dark theme color */
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 32px;
+          z-index: 999;
+          padding: 40px 24px;
+          opacity: 0;
+          pointer-events: none;
+          transform: translateY(-20px);
+          transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          overflow-y: auto;
+        }
+
+        .nav-links a {
+          font-size: 1.5rem;
+          letter-spacing: 0.15em;
+          width: auto;
+          text-align: center;
+          color: rgba(245, 242, 236, 0.9);
+          padding: 8px 16px;
+          transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:active {
+          color: var(--taupe);
+        }
+
+        .nav-cb:checked ~ .nav-links {
+          opacity: 1;
+          pointer-events: auto;
+          transform: translateY(0);
+        }
+
+        .nav-btn-desktop {
+          display: none;
+        }
+
+        .nav-btn-mobile {
+          display: block !important;
+          border: 1px solid var(--taupe);
+          padding: 10px 24px !important;
+          color: var(--taupe) !important;
+          text-align: center;
+          width: max-content;
+          margin: 0 auto;
+        }
+
+        .nav-btn-mobile:hover {
+          background-color: var(--taupe);
+          color: var(--black) !important;
+        }
+
+        .hero-section {
+          padding: 0 24px 60px 24px;
+        }
+
+        .hero-chips {
+          gap: 8px;
+        }
+
+        .hero-vertical-text {
+          display: none;
+        }
+
+        .about-columns {
+          grid-template-columns: 1fr;
+          gap: 48px;
+        }
+
+        .craft-grid-wrapper {
+          grid-template-columns: 1fr;
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-top {
+          flex-direction: column;
+          text-align: center;
+          justify-content: center;
+          gap: 12px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .about-feature-row {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 4px;
+        }
+
+        .about-feature-desc {
+          text-align: left;
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- NAVIGATION (sticky) -->
+    <header class="nav-header">
+      <div class="nav-container">
+        <a href="#" class="logo-group">
+          <img src="https://i.ibb.co/zh3H50Sh/628422065-1339568864642432-3358725624133701675-n.jpg" alt="Kuźnia Żywiołów Logo" class="nav-logo" referrerpolicy="no-referrer">
+          <div class="logo-text">
+            <span class="logo-title">KUŹNIA ŻYWIOŁÓW</span>
+            <span class="logo-subtitle">The Elemental Forge</span>
+          </div>
+        </a>
+
+        <input type="checkbox" id="nav-open" class="nav-cb">
+        <label for="nav-open" class="nav-burger" aria-label="Menu Toggle"></label>
+
+        <nav class="nav-links" id="main-nav-links">
+          <a href="#o-nas">O Nas</a>
+          <a href="#rzemioslo">Rzemiosło</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#kontakt" class="nav-btn-mobile">KONTAKT</a>
+        </nav>
+
+        <a href="#kontakt" class="nav-btn-desktop" id="nav-btn-contact">KONTAKT</a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-vertical-text">FIRE &middot; EARTH &middot; IRON &middot; SOIL</div>
+      
+      <div class="hero-content">
+        <span class="section-label" style="color: var(--taupe);">Metalwork &middot; Ecological Growing</span>
+        <div class="ornament left-aligned">
+          <span class="orn-line"></span>
+          <span class="orn-mark">⚒</span>
+          <span class="orn-line"></span>
+        </div>
+        
+        <h1 class="hero-title-container">
+          <span class="hero-h1-main">Kuźnia Żywiołów</span>
+          <span class="hero-h1-sub">THE ELEMENTAL FORGE</span>
+        </h1>
+        
+        <p class="hero-motto">"Necessity is a mother of invention."</p>
+        
+        <div class="hero-chips">
+          <span class="hero-chip">🔥 Kucie ręczne</span>
+          <span class="hero-chip">🌱 Ekologiczna uprawa</span>
+        </div>
+        
+        <div class="hero-links">
+          <a href="#o-nas" class="hero-link-primary" id="hero-cta-about">→ Poznaj rzemiosło</a>
+          <a href="#galeria" class="hero-link-secondary" id="hero-cta-gallery">→ Galeria prac</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="light-section section-padding" id="o-nas" style="border-bottom: 1px solid var(--taupe-dark);">
+      <div class="container-width">
+        <div class="about-columns">
+          
+          <!-- Left Column -->
+          <div>
+            <span class="section-label">O NAS</span>
+            <div class="ornament left-aligned">
+              <span class="orn-line"></span>
+              <span class="orn-mark">⚒</span>
+              <span class="orn-line"></span>
+            </div>
+            <h2>Dwa żywioły, jedno rzemiosło.</h2>
+            <div class="about-rule"></div>
+            
+            <p class="body-text" style="margin-bottom: 16px;">
+              Kuźnia Żywiołów to miejsce, gdzie ogień spotyka ziemię. Zajmujemy się kuciem metalu — tworzeniem przedmiotów ręcznie, młotem i żarem, tak jak robiono to od wieków.
+            </p>
+            <p class="body-text" style="margin-bottom: 16px;">
+              Równolegle uprawiamy ekologiczne owoce i warzywa — z tą samą cierpliwością i szacunkiem dla materii, jaki wkładamy w każde uderzenie w kowadło.
+            </p>
+            <p class="body-text" style="font-style: italic; color: var(--black);">
+              „Necessity is a mother of invention” — konieczność jest matką wynalazku. To motto, które prowadzi każdą naszą pracę.
+            </p>
+            
+            <div class="about-feature-rows">
+              <div class="about-feature-row">
+                <span class="about-feature-title">🔥 KUCIE METALU</span>
+                <span class="about-feature-desc">przedmioty tworzone ręcznie, młotem i żarem</span>
+              </div>
+              <div class="about-feature-row">
+                <span class="about-feature-title">🌱 UPRAWA EKOLOGICZNA</span>
+                <span class="about-feature-desc">owoce i warzywa bez chemii, z troską o ziemię</span>
+              </div>
+              <div class="about-feature-row">
+                <span class="about-feature-title">⚒️ RZEMIOSŁO</span>
+                <span class="about-feature-desc">tradycyjne metody, cierpliwość i precyzja</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column (Contact Card) -->
+          <div class="about-card" id="about-contact-card">
+            <span class="about-card-label">KONTAKT</span>
+            <hr class="about-card-rule-1">
+            <a href="tel:+447723012423" class="about-card-phone">+44 7723 012423</a>
+            <a href="mailto:jacekgrzymala@aol.com" class="about-card-email">jacekgrzymala@aol.com</a>
+            <hr class="about-card-rule-2">
+            <p class="about-card-motto">"Necessity is a mother of invention."</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- RZEMIOSŁO SECTION -->
+    <section class="dark-section section-padding" id="rzemioslo">
+      <div class="container-width">
+        <div style="text-align: center;">
+          <span class="section-label">RZEMIOSŁO</span>
+          <div class="ornament">
+            <span class="orn-line"></span>
+            <span class="orn-mark">⚒</span>
+            <span class="orn-line"></span>
+          </div>
+          <h2>Dwa żywioły</h2>
+        </div>
+        
+        <div class="craft-grid-wrapper">
+          <div class="craft-panel">
+            <span class="craft-panel-title">🔥 KUCIE METALU</span>
+            <p class="craft-panel-desc">
+              Ręczne kucie metalu — technika sięgająca wieków, wymagająca cierpliwości, siły i precyzji. Każdy przedmiot powstaje przy kowadle, żarze i młocie.
+            </p>
+          </div>
+          
+          <div class="craft-panel">
+            <span class="craft-panel-title">🌱 EKOLOGICZNA UPRAWA</span>
+            <p class="craft-panel-desc">
+              Owoce i warzywa uprawiane bez chemii, z szacunkiem dla ziemi i naturalnego rytmu wzrostu. Ta sama filozofia, inny żywioł.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="light-section section-padding" id="galeria" style="border-top: 1px solid var(--taupe-dark); position: relative;">
+      <input type="checkbox" id="gallery-expand" class="gallery-cb">
+      
+      <div class="container-width">
+        <div style="text-align: center;">
+          <span class="section-label">GALERIA</span>
+          <div class="ornament">
+            <span class="orn-line"></span>
+            <span class="orn-mark">⚒</span>
+            <span class="orn-line"></span>
+          </div>
+          <h2>Ogień i ziemia w obiektywie</h2>
+        </div>
+        
+        <div class="gallery-grid">
+          <!-- Always visible (1-6) -->
+          <a href="#zoom-1" class="gallery-item">
+            <img src="https://i.ibb.co/1fKkz1gT/468950430-1019257040006951-3926551994384394539-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Praca przy kowadle">
+          </a>
+          <a href="#zoom-2" class="gallery-item">
+            <img src="https://i.ibb.co/jZJn7TSr/469448741-1019257046673617-5486425789683897969-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Rozżarzona stal">
+          </a>
+          <a href="#zoom-3" class="gallery-item">
+            <img src="https://i.ibb.co/d4Ltg232/476835794-1064764492122872-3489548532509414747-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Narzędzia kowalskie">
+          </a>
+          <a href="#zoom-4" class="gallery-item">
+            <img src="https://i.ibb.co/Zp6SxSJf/721995086-1440144967918154-7697105227992869470-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Ekologiczne zbiory">
+          </a>
+          <a href="#zoom-5" class="gallery-item">
+            <img src="https://i.ibb.co/SDC6fZvM/725238023-1445988614000456-7776099315368802486-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Prace w ogrodzie">
+          </a>
+          <a href="#zoom-6" class="gallery-item">
+            <img src="https://i.ibb.co/h1LJfGxk/731761827-1451471876785463-5631043138322884934-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Kute detale">
+          </a>
+        </div>
+        
+        <!-- Hidden container (7-13) -->
+        <div class="gallery-extra-container">
+          <div class="gallery-grid" style="margin-top: 12px;">
+            <a href="#zoom-7" class="gallery-item">
+              <img src="https://i.ibb.co/357j7Qx5/732813646-1451471956785455-9180305839578803309-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Proces kucia">
+            </a>
+            <a href="#zoom-8" class="gallery-item">
+              <img src="https://i.ibb.co/Zp7bhMny/732206202-1452629020003082-5834987563369643770-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Warzywa prosto z ziemi">
+            </a>
+            <a href="#zoom-9" class="gallery-item">
+              <img src="https://i.ibb.co/x886BFLg/736658917-1455781549687829-8143605025785289785-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Tradycyjne palenisko">
+            </a>
+            <a href="#zoom-10" class="gallery-item">
+              <img src="https://i.ibb.co/C5bLZL9h/736449399-1455781703021147-3990930313133028813-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Naturalne uprawy">
+            </a>
+            <a href="#zoom-11" class="gallery-item">
+              <img src="https://i.ibb.co/nsySZybF/736683203-1455781856354465-8529711443584681480-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Wyroby artystyczne">
+            </a>
+            <a href="#zoom-12" class="gallery-item">
+              <img src="https://i.ibb.co/zhSvRxqJ/740858827-1458750482724269-2805018553144185436-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Uderzenie młota">
+            </a>
+            <a href="#zoom-13" class="gallery-item">
+              <img src="https://i.ibb.co/HL2JygT5/742631722-1462285435704107-2782712611910062366-n.jpg" referrerpolicy="no-referrer" loading="lazy" alt="Plony ziemi">
+            </a>
+          </div>
+        </div>
+        
+        <label for="gallery-expand" class="gallery-toggle" id="gallery-expand-label">
+          <span class="toggle-more">Pokaż wszystkie (13) ↓</span>
+          <span class="toggle-less">Zwiń ↑</span>
+        </label>
+      </div>
+
+      <!-- Lightbox Modals (Zoomed views) -->
+      <div id="zoom-1" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-13" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/1fKkz1gT/468950430-1019257040006951-3926551994384394539-n.jpg" referrerpolicy="no-referrer" alt="Praca przy kowadle">
+          <span class="lightbox-caption">Praca przy kowadle</span>
+          <a href="#zoom-2" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+
+      <div id="zoom-2" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-1" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/jZJn7TSr/469448741-1019257046673617-5486425789683897969-n.jpg" referrerpolicy="no-referrer" alt="Rozżarzona stal">
+          <span class="lightbox-caption">Rozżarzona stal</span>
+          <a href="#zoom-3" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+
+      <div id="zoom-3" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-2" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/d4Ltg232/476835794-1064764492122872-3489548532509414747-n.jpg" referrerpolicy="no-referrer" alt="Narzędzia kowalskie">
+          <span class="lightbox-caption">Narzędzia kowalskie</span>
+          <a href="#zoom-4" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+
+      <div id="zoom-4" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-3" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/Zp6SxSJf/721995086-1440144967918154-7697105227992869470-n.jpg" referrerpolicy="no-referrer" alt="Ekologiczne zbiory">
+          <span class="lightbox-caption">Ekologiczne zbiory</span>
+          <a href="#zoom-5" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+
+      <div id="zoom-5" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-4" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/SDC6fZvM/725238023-1445988614000456-7776099315368802486-n.jpg" referrerpolicy="no-referrer" alt="Prace w ogrodzie">
+          <span class="lightbox-caption">Prace w ogrodzie</span>
+          <a href="#zoom-6" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+
+      <div id="zoom-6" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-5" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/h1LJfGxk/731761827-1451471876785463-5631043138322884934-n.jpg" referrerpolicy="no-referrer" alt="Kute detale">
+          <span class="lightbox-caption">Kute detale</span>
+          <a href="#zoom-7" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+
+      <div id="zoom-7" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-6" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/357j7Qx5/732813646-1451471956785455-9180305839578803309-n.jpg" referrerpolicy="no-referrer" alt="Proces kucia">
+          <span class="lightbox-caption">Proces kucia</span>
+          <a href="#zoom-8" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+
+      <div id="zoom-8" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-7" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/Zp7bhMny/732206202-1452629020003082-5834987563369643770-n.jpg" referrerpolicy="no-referrer" alt="Warzywa prosto z ziemi">
+          <span class="lightbox-caption">Warzywa prosto z ziemi</span>
+          <a href="#zoom-9" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+
+      <div id="zoom-9" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-8" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/x886BFLg/736658917-1455781549687829-8143605025785289785-n.jpg" referrerpolicy="no-referrer" alt="Tradycyjne palenisko">
+          <span class="lightbox-caption">Tradycyjne palenisko</span>
+          <a href="#zoom-10" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+
+      <div id="zoom-10" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-9" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/C5bLZL9h/736449399-1455781703021147-3990930313133028813-n.jpg" referrerpolicy="no-referrer" alt="Naturalne uprawy">
+          <span class="lightbox-caption">Naturalne uprawy</span>
+          <a href="#zoom-11" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+
+      <div id="zoom-11" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-10" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/nsySZybF/736683203-1455781856354465-8529711443584681480-n.jpg" referrerpolicy="no-referrer" alt="Wyroby artystyczne">
+          <span class="lightbox-caption">Wyroby artystyczne</span>
+          <a href="#zoom-12" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+
+      <div id="zoom-12" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-11" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/zhSvRxqJ/740858827-1458750482724269-2805018553144185436-n.jpg" referrerpolicy="no-referrer" alt="Uderzenie młota">
+          <span class="lightbox-caption">Uderzenie młota</span>
+          <a href="#zoom-13" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+
+      <div id="zoom-13" class="lightbox">
+        <a href="#galeria" class="lightbox-backdrop"></a>
+        <div class="lightbox-content">
+          <a href="#zoom-12" class="lightbox-arrow prev">&lsaquo;</a>
+          <img class="lightbox-image" src="https://i.ibb.co/HL2JygT5/742631722-1462285435704107-2782712611910062366-n.jpg" referrerpolicy="no-referrer" alt="Plony ziemi">
+          <span class="lightbox-caption">Plony ziemi</span>
+          <a href="#zoom-1" class="lightbox-arrow next">&rsaquo;</a>
+          <a href="#galeria" class="lightbox-close">&times;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOTTO SECTION -->
+    <section class="motto-section" id="motto">
+      <div class="motto-container">
+        <div class="motto-quote-mark">“</div>
+        <p class="motto-quote">"Necessity is a mother of invention."</p>
+        <div class="ornament">
+          <span class="orn-line"></span>
+          <span class="orn-mark">⚒</span>
+          <span class="orn-line"></span>
+        </div>
+        <div class="motto-sub">KUŹNIA ŻYWIOŁÓW &middot; THE ELEMENTAL FORGE</div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="light-section section-padding" id="kontakt" style="border-top: 1px solid var(--taupe-dark);">
+      <div class="container-width">
+        <div style="text-align: center;">
+          <span class="section-label">KONTAKT</span>
+          <div class="ornament">
+            <span class="orn-line"></span>
+            <span class="orn-mark">⚒</span>
+            <span class="orn-line"></span>
+          </div>
+          <h2>Skontaktuj się.</h2>
+        </div>
+        
+        <div class="contact-container">
+          <p class="body-text contact-intro">
+            Zainteresowany kutym przedmiotem lub ekologicznymi plonami? Napisz lub zadzwoń — chętnie opowiem więcej.
+          </p>
+          
+          <div class="contact-row">
+            <span class="contact-row-label">TELEFON</span>
+            <a href="tel:+447723012423" class="contact-row-value phone">+44 7723 012423</a>
+          </div>
+          
+          <div class="contact-row" style="border-bottom: 1.5px solid var(--black);">
+            <span class="contact-row-label">E-MAIL</span>
+            <a href="mailto:jacekgrzymala@aol.com" class="contact-row-value email">jacekgrzymala@aol.com</a>
+          </div>
+          
+          <a href="tel:+447723012423" class="contact-cta-primary" id="contact-btn-phone">ZADZWOŃ: +44 7723 012423</a>
+          <a href="mailto:jacekgrzymala@aol.com" class="contact-cta-secondary" id="contact-btn-email">NAPISZ E-MAIL</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container-width">
+        <div class="footer-top">
+          <div class="footer-logo-group">
+            <img src="https://i.ibb.co/zh3H50Sh/628422065-1339568864642432-3358725624133701675-n.jpg" alt="Kuźnia Żywiołów Logo" class="footer-logo" referrerpolicy="no-referrer">
+            <span class="footer-logo-title">KUŹNIA ŻYWIOŁÓW</span>
+          </div>
+          <span class="footer-sub">The Elemental Forge</span>
+          <span class="footer-copyright">© 2026</span>
+        </div>
+        
+        <hr class="footer-rule">
+        
+        <div class="footer-bottom">
+          +44 7723 012423 &middot; jacekgrzymala@aol.com
+        </div>
+      </div>
+    </footer>
+
+    <!-- MOBILE NAV HELPER -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const navOpen = document.getElementById('nav-open');
+        
+        if (navOpen) {
+          navOpen.addEventListener('change', function() {
+            if (navOpen.checked) {
+              document.body.style.overflow = 'hidden';
+            } else {
+              document.body.style.overflow = '';
+            }
+          });
+        }
+
+        if (navLinks.length && navOpen) {
+          navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+              navOpen.checked = false;
+              document.body.style.overflow = '';
+            });
+          });
+        }
+      });
+    </script>
+
+  </body>
+</html>

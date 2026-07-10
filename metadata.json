@@ -1,0 +1,6 @@
+{
+  "name": "Kuźnia Żywiołów — The Elemental Forge",
+  "description": "Kuźnia Żywiołów — ręczne kucie metalu i ekologiczna uprawa owoców i warzyw. Necessity is a mother of invention. Kontakt: +44 7723 012423",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
